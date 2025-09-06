@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCMB</title>
+    <link rel="stylesheet" href="bank.css">
+</head>
+
+<body>
+    <div id="top-bar">
+        <a class="lop-bar" href="#">HOME</a>
+        <a class="lop-bar" href="#">PERSONAL</a>
+        <a class="lop-bar" href="#">BUISNESS</a>
+        <a class="lop-bar" href="#">COPERATE</a>
+    </div>
+    <div class="clear"></div>
+    <div id="sec-container">
+        <div id="top-bar2">
+            <div id="images">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAnFBMVEVcJoT/txf///9bJoRbI4NqOo5SGoj/vA79txG5fFRTHIf7thmiaWRoM4BXIYWfZGBXG4Dt6PL39PlwRJJPAHyRc6qZe7GobmC1ocawm8KHY6ObYGHm3+xPCHvBr8+pj71ySpPb0eONbKifhrViLojTx919V5zHt9T/wADLvdZ7UZpyPHmSWmt8R3fjoC7vqiGJUGl+RW/WlTlLEIhPO2ORAAAFSUlEQVR4nO2c63KjOBBGtUhMMp5dIgRmMIsMGIwnntvO7vu/2+rGXYyFK7ZJlb4fqVgg6dDdahpbBXCYitIFEKxAbllwHuA4JEMYsRb4eCGMM8KhSELROuzEhWhCGFRG2f+rgYKQZg4oAHo0yFAIFyCjq7GSFDMVyNHKoAAKgLsy7wGI3PVBgTVCSUutLKYslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkslKkWQI1P0nSanAJnT70SCiE80OgsNG2GAHmsAXWfRQNrgcM+rAWh+Z+p5qGwG4w0RKrqKMuyKHFxNzoSfVzcGghVsifsHVZyAcZLoXDij1QE3ew02BWE7x9wSLo/U3UA1/LEc3OiFxSi5cCnh6Mhi7geW/8i1M4Zyc+9pg/epv0DpTIW3sqGk/ylHCIUy4ZI2ISOh/QzrPXhHBTE8QQqEFDMJzQmw0OxHLyBciIqQnxzIH2ocHKd7ADUrZclUMIJLDSyyeAlHkD5PIohAkU7N++poIhDSHNRqavbpXEBipz2rWK3cZKKpuMui4/i/9dgaClmOsiGaOH7UGlSMx32oiNJdME+H1OxvBLa5QRpaYTl9acRX+DoUDhkB4YxJSfDua+DKoAYTAYYOVwD1Vtxyvv4oJwp1hzCQbxtV18L5RxZ5J2cAZSKqaIS0+FAQNVL3KeBUqKvch6qPqMu3fSgnJIKL5OppTgUBPQgzXYNVEVbSTxUpc1onQFhH8oX1OlZeHnvT6BoyFWnsyF1CcrfZY2iSgZzLS5+3+2Pge2qVlASR5xWnDso5T5SMKWiudAzXYLqKZWn4UTMlumGU1BBk55YHAcTS7UiMQqXZnQNFOigyt9A5WHTN6b5PBTLKVm1KKPPW2rivikUlnHHuuBc474jl8wrp+qKQHfSVq/SUsgdBDps//SgEBYOZGGMppZiq4+rSsSRfXjF6jtXrpKyNFS5M2lTgliXcACF8F5OOA+FwlLYTVcoXMzosh7r1WQ0ElB+JaMKV1nJirghFBu14LMPoIbJE0hrOjV+i+SJgFxbxzxkySt0Wd7eN4AKilUTOEq3bDqdpeRtRt1nnORNoABV91myL7eRTI7+tndDZpZiuQtTDqKzVJ2fz+c8UeWP+yZQrEdzU+tKkKxXuvi9PX4aKCLXjeqZ6lLVhdJlCsVOxeA4Shc7PLKUDmqSp5xrSxeN+xiwO0hipFRLaAIFL0CRrcZ5v63RmXNIoYNiBgjPr43n/L0bQtAsKKZ0YKmUN22bGp305BclorrR56FQkDDVla4Pnx/XZXw6nXZRjps0xRKr7NONByvekqi8K4ZsVAdgbsfy/HOffHDUXonsSHkNQmU0DR42+1M1Lb0P3QPp/Njv+7uE+8lCmcpCmcpCmcpCmcpCmcpCmer9QXmb28tbBAWh9/XbnzfXdw3VLBSEm28/Pt1cz5835lAQfHh5fvrj5npaBIU2P59vz7QQavPPHey0GOpvC2WhLJSF6kM930GLoID39eUuWnRDBt6Hu2hZ6YLuwrSsnvJ+fbyLfi1x3+bly9Md9OXzZsH36GtNCRbKQr0l1CoDfZVQ0Pu1Qii0+XEPqmXuA973n0+3f/JbCMWKl38/raye4mH1H/jr5qoWbH9Txrq9dL+vvb8vzR4lC2UqC2UqC2UqC2UqC2WqFUM9mmIsBlXP7/15kLwA7Fb28j4IcAZS7V7ZBwqBFDgxXVVUIbrjr848rOvVmQciXjIaV7Tbj/tQYVrF4iWjfO9knATuGpTEYhf3/w5EuqwgQRczAAAAAElFTkSuQmCC"
+                    alt="">
+            </div>
+            <div id="omo-bro">
+                <a class="lop-bar2" href="#">OPEN AN ACCOUNT</a>
+                <a class="lop-bar2" href="#">INTERNET BANKING</a>
+                <a class="lop-bar2" href="#">CONTACT US</a>
+                <input id="search-pol" type="search" placeholder="search">
+            </div>
+        </div>
+        <div class="sub-menu-wrapper">
+            <div class="sub-menu">
+                <a href="#">PERSONAL BANKING</a>
+                <a href="#">BUSINESS BANKING</a>
+                <a href="#">CORPORATE BANKING</a>
+                <a href="#">GROUP & SUBSIDIARIES</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">MY BANK AND I</a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="div-a">
+        <img src="imagge/images.jpg" alt="">
+    </div>
+    <div id="third-container">
+        <div class="word-br">
+            <h1>CARD DISPUTE RESOLUTION</h1>
+            <p>Log dispense error for
+                failed e-channel card
+                transactions with
+                debited account but no value received.
+            </p>
+            <img src="https://www.fcmb.com//sites/default/files/card_dispute.jpg" alt="">
+            <a href=""><button class="button">Log Error Now</button></a>
+        </div>
+        <div class="word-br">
+            <h1>SELF SERVICE PORTAL</h1>
+            <p>Your one-stop hub for <br> quick fixes and easy <br> access. Manage your <br> account and carry out key
+                <br> services without having <br>to speak with a Contact <br>Centre Representative.
+            </p>
+            <img class="ima-ge"
+                src="data:image/jpeg;base64,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"
+                alt="">
+            <a href=""><button class="button">START NOW</button></a>
+        </div>
+        <div class="word-br">
+            <h1>ASK TEMI</h1>
+            <p>Chat with Temi to open <br>an account, Check your <br>balance, increase your <br>account limit and much
+                <br>more.
+            </p>
+            <img class="ima-ge"
+                src="data:image/jpeg;base64,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"
+                alt="">
+            <a href=""><button class="button">Chat with Temi</button></a>
+        </div>
+        <div class="word-br">
+            <h1>FASTCASH LOAN</h1>
+            <p>Get up to 400k instant loan with up to 90 days repayment period. No collateral. No paperwork</p>
+            <img class="ima-ge"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWhf4sDV2Q5KhzIq4B-zdyw7Uy2zxON-F0w&s"
+                alt="">
+            <a href=""><button class="button">Apply For Fast Cash Now</button></a>
+        </div>
+
+
+    </div>
+    <hr>
+    <div id="image-2">
+        <img id="image-3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmMfxs7kJK0_B1MPOXER7uzi36IYwFYH8_Ng&s" alt="">
+    </div>
+    <hr>
+    <div id="fourth-container">
+        <div class="small-box">
+            <h1>TAKE CHARGE WITH *329#</h1>
+            <P>Perform all your banking transactions on the go - buy airtime, transfer money, access a loan and more.
+            </P>
+            <a href="">Bank with USSD</a>
+
+        </div>
+        <div class="small-box">
+            <h1>EASY ACCOUNT</h1>
+            <P>No bank visits. No paperwork. No BVN. Simply open a bank account with your phone number on your phone –
+                no data required.</P>
+            <a href="">Open Easy Account</a>
+
+        </div>
+        <div class="small-box">
+            <h1>PTA/BTA DEFAULTERS</h1>
+            <P>List of customers who breached Central Bank of Nigeria (CBN) Policy on purchase of FX for PTA/BTA.</P>
+            <a href="">PTA/BTA Policy Breach List</a>
+
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <th>Currency</th>
+                <th>We Buy</th>
+                <th>We Sell</th>
+            </tr>
+            <tr>
+                <td class="td-auto" colspan="3">AUTONOMOUS</td>
+            </tr>
+            <tr>
+                <td class="currency">USD</td>
+                <td>1500.0000</td>
+                <td>1520.0000</td>
+            </tr>
+            <tr>
+                <td class="currency">GBP</td>
+                <td>1998.0000</td>
+                <td>2101.4000</td>
+            </tr>
+            <tr>
+                <td class="currency">EUR</td>
+                <td>1713.7500</td>
+                <td>1813.3500</td>
+            </tr>
+            <tr>
+                <td class="td-auto" colspan="3">CROSS SELL</td>
+            </tr>
+            <tr>
+                <td class="currency">GBP/USD</td>
+                <td>1.3320</td>
+                <td>1.3825</td>
+            </tr>
+            <tr>
+                <td class="currency">EUR/USD</td>
+                <td>1.1425</td>
+                <td>1.1930</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+
+    <footer>
+              <div class="last-container">
+            <h2>SITEMAP</h2>
+            <div class="site-map">
+                <div>
+                    <h3>PERSONAL BANKING</h3>
+                    <ul>
+                        <a href="">
+                            <li>CURRENT ACCOUNTS</li>
+                        </a>
+                        <a href="">
+                            <li>SAVINGS ACCOUNTS</li>
+                        </a>
+                        <a href="">
+                            <li>INVESTMENTS</li>
+                        </a>
+                        <a href="">
+                            <li>LOANS AND CREDIT CARDS</li>
+                        </a>
+                        <a href="">
+                            <li>DIASPORA BANKING</li>
+                        </a>
+                        <a href="">
+                            <li>WAYS TO BANK</li>
+                        </a>
+                        <a href="">
+                            <li>BANCASSURANCE</li>
+                        </a>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3>BUSINESS BANKING</h3>
+                    <ul>
+                        <a href="">
+                            <li>PROPOSITIONS</li>
+                        </a>
+                        <a href="">
+                            <li>CURRENT ACCOUNTS</li>
+                        </a>
+                        <a href="">
+                            <li>SAVINGS ACCOUNTS</li>
+                        </a>
+                        <a href="">
+                            <li>LOANS</li>
+                        </a>
+                        <a href="">
+                            <li>BONDS & GUARANTEES</li>
+                        </a>
+                        <a href="">
+                            <li>INTERVENTION FUNDS</li>
+                        </a>
+                        <a href="">
+                            <li>TRADE SERVICE</li>
+                        </a>
+                        <a href="">
+                            <li>PAYMENT & COLLECTION</li>
+                        </a>
+                        <a href="">
+                            <li>WAYS TO BANK</li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>COPERATE BANKING</h3>
+                    <ul>
+                        <a href="">
+                            <li> AGRIBUSINESS AND NON—OIL EXPORTS</li>
+                        </a>
+                        <a href="">
+                            <li> FOREIGN EXCHANGE SERVICES</li>
+                        </a>
+                        <a href="">
+                            <li> TRADE SERVICES</li>
+                        </a>
+                        <a href="">
+                            <li>CASH MANAGEMENT SOLUTIONS</li>
+                        </a>
+                        <a href="">
+                            <li> CORPORATE FINANCE</li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>GROUP & SUBSIDIARIES</h3>
+                    <ul>
+                        <a href="">
+                            <li> FCMB GROUP PLC</li>
+                        </a>
+                        <a href="">
+                            <li> CSL STOCKBROKERS</li>
+                        </a>
+                        <a href="">
+                            <li>FCMB CAPITAL MARKETS</li>
+                        </a>
+                        <a href="">
+                            <li>FCMB ASSET MANAGEMENT</li>
+                        </a>
+                        <a href="">
+                            <li>FCMB MICROFINANCE BANK</li>
+                        </a>
+                        <a href="">
+                            <li>FCMB UK</li>
+                        </a>
+                        <a href="">
+                            <li> FCMB PENSIONS LIMITED</li>
+                        </a>
+                        <a href="">
+                            <li> CREDIT DIRECT LIMITED</li>
+                        </a>
+                        <a href="">
+                            <li>FCMB TRUSTEES</li>
+                        </a>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <a href="">
+                            <li> OUR VISION/MISSION/VALUES</li>
+                        </a>
+
+                        <a href="">
+                            <li> OUR HISTORY</li>
+                        </a>
+
+                        <a href="">
+                            <li> INVESTOR RELATIONS</li>
+                        </a>
+
+                        <a href="">
+                            <li>CSR</li>
+                        </a>
+
+                        <a href="">
+                            <li>SUSTAINABILITY</li>
+                        </a>
+
+                        <a href="">
+                            <li>OUR LEADERSHIP</li>
+                        </a>
+
+                        <a href="">
+                            <li>BOARD OF DIRECTORS</li>
+                        </a>
+
+                        <a href="">
+                            <li>MEDIA RELATIONS</li>
+                        </a>
+
+                        <a href="">
+                            <li> AWARDS AND RECOGNITION</li>
+                        </a>
+
+                        <a href="">
+                            <li>OUR POLICIES</li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <h3>MY BANK AND I</h3>
+                    <ul>
+                        <a href="">
+                            <li>NIN LINKAGE</li>
+                        </a>
+                        <a href="">
+                            <li>SELF SERVICE</li>
+                        </a>
+                        <a href="">
+                            <li>CURRENT CAMPAIGNS/PROMOS</li>
+                        </a>
+                        <a href="">
+                            <li>CAREERS</li>
+                        </a>
+                        <a href="">
+                            <li>CUSTOMER FEEDBACK</li>
+                        </a>
+                        <a href="">
+                            <li>CUSTOMER SERVICE</li>
+                        </a>
+                        <a href="">
+                            <li>FAQS</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="foot-bar">
+            <h1>my bank and i</h1>
+        </div>
+        <div class="footer-social">
+            <span>🔵</span>
+            <span>🔗</span>
+            <span>▶️</span>
+            <span>📸</span>
+            <span>💬</span>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Press Releases</a>
+            <a href="#">Share Price</a>
+            <a href="#">Whistle Blower</a>
+            <a href="#">Fraud Prevention</a>
+            <a href="#">AML</a>
+            <a href="#">Careers</a>
+        </div>
+
+        <p class="copyright">
+            © 2025 First City Monument Bank (Licensed by the Central Bank of Nigeria)
+        </p>
+    </footer>
+</body>
+
+</html>
